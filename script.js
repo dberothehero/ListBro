@@ -14,6 +14,7 @@ function onClick(e) {
     document.querySelector('#p-input').style.display = 'block';
 }
 
+// trying to make the user input text turn into a paragraph element upon pressing enter
 pInput.addEventListener("keypress", function(press) {
     if (pInput.value.length > 0 && press.keypress === 13) {
         console.log("works");
