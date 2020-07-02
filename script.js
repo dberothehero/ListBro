@@ -1,7 +1,10 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var pInput = document.getElementById("p-input")
+var describe = document.getElementById("describe")
+
+
+
 
 function inputLength() {
     return input.value.length;
@@ -9,16 +12,13 @@ function inputLength() {
 
 // this makes the customizeable textbox turn into an input when clicked
 
-function onClick(e) {
-    e.currentTarget.style.display = 'none';
-    document.querySelector('#p-input').style.display = 'block';
-}
+describe.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+        document.getElementById("empty").innerHTML = describe.value;
+        describe.value = ""
 
-// trying to make the user input text turn into a paragraph element upon pressing enter
-pInput.addEventListener("keypress", function(press) {
-    if (pInput.value.length > 0 && press.keypress === 13) {
-        console.log("works");
     }
+
 })
 
 function createListElement() {
