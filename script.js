@@ -34,7 +34,7 @@ function createListElement() {
         // adds a button enxt to the list element
     var bu = document.createElement("button");
     bu.classList.add("removeButton");
-    bu.appendChild(document.createTextNode("remove"));
+    bu.appendChild(document.createTextNode("x"));
     li.appendChild(bu)
     bu.onclick = removeParent;
 }
